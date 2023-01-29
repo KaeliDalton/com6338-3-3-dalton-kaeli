@@ -1,6 +1,6 @@
 var questionsArr = 
 [
-    {question:'JavaScript is the best language.',
+    {question:'The chemical formula NaCl is that of table salt',
     answer: true},
 
     {question:'There are seven days in a week.',
@@ -14,15 +14,20 @@ var questionsArr =
 
     {question:'11x11 is 111.',
     answer: false},
+
+    {question: 'One mole is 6.022x10^23 units',
+    answer: true},
 ]
-let numOfAgrees = 0
+var numCorrect = 0
 
 function runQuiz(){
     for( i=0; i < questionsArr.length; i++){
      if(confirm(questionsArr[i].question) === questionsArr[i].answer) {
-            numOfAgrees++
+            numCorrect++
         }  else{}
+    var quizLength = questionsArr.length
+    var quizScore = (numCorrect/quizLength) * 100
     }
-    var score = (numOfAgrees/questionsArr.length) * 100
-    alert ('You Scored '+ Math.round(score) + '%!')
+    var score = Math.round((quizScore))
+    alert ('You Scored '+ score + '%!')
 }
