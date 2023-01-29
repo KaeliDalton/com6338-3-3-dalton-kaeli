@@ -24,10 +24,10 @@ function runQuiz(){
     for( i=0; i < questionsArr.length; i++){
      if(confirm(questionsArr[i].question) === questionsArr[i].answer) {
             numCorrect++
-        }  else{}
-    var quizLength = questionsArr.length
-    var quizScore = (numCorrect/quizLength) * 100
+        }
     }
-    var score = Math.round((quizScore))
-    alert ('You Scored '+ score + '%!')
+    var quizScore = Math.round((numCorrect/questionsArr.length) * 100)
+
+    alert ("You Scored "+ quizScore + "%")
+    numCorrect = 0
 }
